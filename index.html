@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- HTML5 document. Lowercase tags, quoted attributes and properly nested elements. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML basics and content</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#f4f6f7;color:#203540;font:17px/1.65 Arial,sans-serif}header,main,footer{max-width:1050px;margin:auto;padding:24px}header{padding-top:45px}nav{display:flex;gap:20px;flex-wrap:wrap}a{color:#086d79}section{background:white;padding:26px;margin:22px 0;border:1px solid #dbe3e6;border-radius:12px}h1{font-size:38px;line-height:1.2}h2{color:#153f52}code,kbd,samp,pre{font-family:monospace}code{background:#edf4f5;padding:2px 5px}pre{overflow:auto;background:#edf4f5;padding:18px}table{border-collapse:collapse;margin:18px 0;max-width:100%}th,td{padding:12px;border:1px solid #b8c9cf}th{background:#e6f1f2}caption{font-weight:bold;text-align:left;margin-bottom:10px}fieldset{border:1px solid #b8c9cf;margin:20px 0;padding:20px}legend{font-weight:bold}label{display:block;margin-top:12px}input[type=text],input[type=password],select,textarea{font:inherit;padding:9px;border:1px solid #8ca8b2;border-radius:5px;max-width:100%}textarea{width:100%}input[type=submit],input[type=reset],button{font:inherit;padding:10px 18px;margin:10px 8px 0 0;cursor:pointer}input[type=submit]{background:#153f52;color:white;border:0;border-radius:5px}.note{color:#526771;font-size:15px}.highlight{background:#ffedb1;padding:2px 5px}.group{background:#edf4f5;padding:18px}iframe{width:100%;max-width:100%;background:white}img{max-width:100%;height:auto}.scroll{overflow:auto}footer{font-size:14px}</style>
+</head>
+<body id="top">
+<header><p>DRC1133 / BCI2323 · Chapter 2</p><h1>HTML basics and content</h1><nav><a href="index.html">Page 1: HTML basics</a><a href="page2.html">Page 2: Tables and forms</a></nav></header>
+<main><p>Explore the rendered examples, then open this file in VS Code to inspect the tags and attributes.</p>
+<section id="headings"><h2>01 · Headings and document structure</h2>
+<p>Both files contain <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;title&gt;</code> and <code>&lt;body&gt;</code>.</p>
+<!-- h1 appears in the page header; the following examples demonstrate h2 through h6. -->
+<h3>Heading level 3: Learning HTML</h3><h4>Heading level 4: Elements</h4><h5>Heading level 5: Attributes</h5><h6>Heading level 6: Details</h6>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;&lt;title&gt;My page&lt;/title&gt;&lt;/head&gt;
+  &lt;body&gt;&lt;p&gt;My first paragraph.&lt;/p&gt;&lt;/body&gt;
+&lt;/html&gt;</pre><p class="note">The slides also introduce HTML 4.01 and XHTML declarations. These two pages use HTML5.</p></section>
+<section><h2>02 · Paragraphs, breaks and comments</h2><p>This is the first paragraph.</p><p>This is another paragraph. This sentence contains       extra spaces in the source, which normally collapse in the browser.</p><hr><p>Faculty of Computing<br>HTML practical class<br>Learning through examples</p>
+<!-- This comment is visible in the source code, but is not rendered on the page. -->
+<p>Inspect the source to find the comment. The line above uses <code>&lt;hr&gt;</code>, and the address uses <code>&lt;br&gt;</code>. Both are void elements.</p></section>
+<section><h2>03 · Every text-formatting tag from Part 1</h2>
+<p><b>Bold text</b> uses b. <strong>Important text</strong> uses strong.</p>
+<p><i>Italic text</i> uses i. <em>Emphasized text</em> uses em.</p>
+<p><small>Smaller text</small> uses small. Water is H<sub>2</sub>O, and a square is x<sup>2</sup>.</p>
+<p>The workshop moves from <del>Monday</del> to <ins>Tuesday</ins>. Bring your <mark>laptop</mark>.</p></section>
+<section><h2>04 · Computer output and preformatted text</h2>
+<p>Code: <code>printf("Hello, HTML!");</code></p><p>Keyboard input: press <kbd>Ctrl</kbd> + <kbd>S</kbd>.</p><p>Sample output: <samp>Hello, HTML!</samp></p><p>A variable: <var>x</var> + 5 = 10.</p>
+<pre>Student    Topic       Status
+Aina       HTML        Ready
+Ravi       Tables      Ready</pre></section>
+<section id="links"><h2>05 · Links and images</h2><ul><li><a href="page2.html">Relative link to the second page</a></li><li><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">External link in a new tab (internet needed)</a></li><li><a href="#tips">Bookmark link to useful tips on this page</a></li><li><a href="page2.html#registration">Bookmark link to the form on page 2</a></li></ul>
+<p>Click the image to open page 2. Its <code>src</code>, <code>alt</code>, <code>width</code> and <code>height</code> attributes are set in the source. The image is embedded so it works offline.</p>
+<a href="page2.html"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0ODAiIGhlaWdodD0iMjQwIiB2aWV3Qm94PSIwIDAgNDgwIDI0MCI+PHJlY3Qgd2lkdGg9IjQ4MCIgaGVpZ2h0PSIyNDAiIHJ4PSIyMCIgZmlsbD0iIzE1M2Y1MiIvPjxjaXJjbGUgY3g9IjQwMCIgY3k9IjQ1IiByPSI2NSIgZmlsbD0iIzI0NjQ3OCIvPjx0ZXh0IHg9IjM1IiB5PSIxMDAiIGZpbGw9IndoaXRlIiBmb250LXNpemU9IjQwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+SFRNTCBMZWFybmluZyBMYWI8L3RleHQ+PHRleHQgeD0iMzUiIHk9IjE1MCIgZmlsbD0iI2I4ZTdkZiIgZm9udC1zaXplPSIyMiIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPlN0cnVjdHVyZS4gQ29ubmVjdC4gQ29sbGVjdC48L3RleHQ+PC9zdmc+" alt="HTML Learning Lab banner: Structure, Connect, Collect" width="480" height="240"></a></section>
+<section><h2>06 · Lists</h2><h3>Unordered list</h3><ul><li>Text and images</li><li>Links and lists</li></ul><h3>Ordered list</h3><ol><li>Create an HTML file.</li><li>Add elements and attributes.</li><li>Open it in a browser.</li></ol><h3>Description list</h3><dl><dt>HTML</dt><dd>HyperText Markup Language: describes a web document.</dd><dt>Attribute</dt><dd>Additional information in an opening tag, such as href or alt.</dd></dl></section>
+<section><h2>07 · Block and inline containers</h2><div class="group"><p>This paragraph sits inside a <code>div</code> block container.</p><p>A <span class="highlight">span highlights this part</span> while keeping the text on the same line.</p></div></section>
+<section><h2>08 · Iframe and named link target</h2><p>The second page appears inside this page. The link targets the iframe's <code>name</code>.</p><p><a href="page2.html#registration" target="lesson_frame">Show the registration form inside the frame</a> · <a href="page2.html#tables" target="lesson_frame">Show tables inside the frame</a></p>
+<!-- frameborder is obsolete in HTML5; retained here to demonstrate the lecture example. CSS border:0 is the modern equivalent. -->
+<iframe src="page2.html#tables" name="lesson_frame" title="Page 2 tables and form examples" width="800" height="400" frameborder="0" style="border:0"></iframe></section>
+<section><h2>09 · All character entities from the notes</h2><p>Named and numeric references produce the same character.</p><div class="scroll"><table><caption>HTML character entities</caption><tr><th>Meaning</th><th>Named reference</th><th>Numeric reference</th><th>Output</th></tr><tr><td>Non-breaking space</td><td><code>&amp;nbsp;</code></td><td><code>&amp;#160;</code></td><td>A&nbsp;B</td></tr><tr><td>Less than</td><td><code>&amp;lt;</code></td><td><code>&amp;#60;</code></td><td>&lt;</td></tr><tr><td>Greater than</td><td><code>&amp;gt;</code></td><td><code>&amp;#62;</code></td><td>&gt;</td></tr><tr><td>Ampersand</td><td><code>&amp;amp;</code></td><td><code>&amp;#38;</code></td><td>&amp;</td></tr><tr><td>Cent</td><td><code>&amp;cent;</code></td><td><code>&amp;#162;</code></td><td>&cent;</td></tr><tr><td>Pound</td><td><code>&amp;pound;</code></td><td><code>&amp;#163;</code></td><td>&pound;</td></tr><tr><td>Yen</td><td><code>&amp;yen;</code></td><td><code>&amp;#165;</code></td><td>&yen;</td></tr><tr><td>Euro</td><td><code>&amp;euro;</code></td><td><code>&amp;#8364;</code></td><td>&euro;</td></tr><tr><td>Section</td><td><code>&amp;sect;</code></td><td><code>&amp;#167;</code></td><td>&sect;</td></tr><tr><td>Copyright</td><td><code>&amp;copy;</code></td><td><code>&amp;#169;</code></td><td>&copy;</td></tr><tr><td>Registered trademark</td><td><code>&amp;reg;</code></td><td><code>&amp;#174;</code></td><td>&reg;</td></tr><tr><td>Trademark</td><td><code>&amp;trade;</code></td><td><code>&amp;#8482;</code></td><td>&trade;</td></tr></table></div></section>
+<section id="tips"><h2>10 · Useful tips</h2><p>Use lowercase tag names, quote attribute values, close paired elements and nest them correctly. Attribute values such as file paths and IDs can be case-sensitive.</p><p>Use View Page Source or open the file in VS Code to compare the markup with the output.</p><a href="page2.html">Continue to tables and forms</a></section></main>
+<footer><a href="#top">Back to top</a><p>&copy; HTML Learning Lab. Examples based on the supplied lecture notes.</p></footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- HTML5 document. Lowercase tags, quoted attributes and properly nested elements. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tables and forms</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#f4f6f7;color:#203540;font:17px/1.65 Arial,sans-serif}header,main,footer{max-width:1050px;margin:auto;padding:24px}header{padding-top:45px}nav{display:flex;gap:20px;flex-wrap:wrap}a{color:#086d79}section{background:white;padding:26px;margin:22px 0;border:1px solid #dbe3e6;border-radius:12px}h1{font-size:38px;line-height:1.2}h2{color:#153f52}code,kbd,samp,pre{font-family:monospace}code{background:#edf4f5;padding:2px 5px}pre{overflow:auto;background:#edf4f5;padding:18px}table{border-collapse:collapse;margin:18px 0;max-width:100%}th,td{padding:12px;border:1px solid #b8c9cf}th{background:#e6f1f2}caption{font-weight:bold;text-align:left;margin-bottom:10px}fieldset{border:1px solid #b8c9cf;margin:20px 0;padding:20px}legend{font-weight:bold}label{display:block;margin-top:12px}input[type=text],input[type=password],select,textarea{font:inherit;padding:9px;border:1px solid #8ca8b2;border-radius:5px;max-width:100%}textarea{width:100%}input[type=submit],input[type=reset],button{font:inherit;padding:10px 18px;margin:10px 8px 0 0;cursor:pointer}input[type=submit]{background:#153f52;color:white;border:0;border-radius:5px}.note{color:#526771;font-size:15px}.highlight{background:#ffedb1;padding:2px 5px}.group{background:#edf4f5;padding:18px}iframe{width:100%;max-width:100%;background:white}img{max-width:100%;height:auto}.scroll{overflow:auto}footer{font-size:14px}</style>
+</head>
+<body id="top">
+<header><p>DRC1133 / BCI2323 · Chapter 2</p><h1>Tables and forms</h1><nav><a href="index.html">Page 1: HTML basics</a><a href="page2.html">Page 2: Tables and forms</a></nav></header>
+<main><section id="tables"><h2>01 · Tables, headers, captions and column groups</h2><p>This timetable uses every table tag listed in Part 2, including <code>colgroup</code>, <code>col</code>, <code>thead</code>, <code>tbody</code> and <code>tfoot</code>.</p><div class="scroll">
+<!-- border is a legacy presentation attribute taught in the notes. CSS handles the main styling. -->
+<table border="1"><caption>HTML workshop timetable</caption><colgroup><col style="background:#edf5f6"><col span="2"></colgroup><thead><tr><th scope="col">Session</th><th scope="col">Topic</th><th scope="col">Activity</th></tr></thead><tbody><tr><th scope="row" rowspan="2">Part 1</th><td>Basic elements</td><td><a href="index.html#headings">Explore headings</a></td></tr><tr><td>Lists and links</td><td><ul><li>Create a list</li><li>Link two pages</li></ul></td></tr><tr><th scope="row">Part 2</th><td colspan="2">Tables and registration forms (this cell spans two columns)</td></tr></tbody><tfoot><tr><td colspan="3">Total: three learning activities</td></tr></tfoot></table></div>
+<h3>Elements inside a table cell</h3><table border="1"><caption>Nested cell content</caption><tr><th scope="col">Image and link</th><th scope="col">Nested table</th></tr><tr><td><a href="index.html"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0ODAiIGhlaWdodD0iMjQwIiB2aWV3Qm94PSIwIDAgNDgwIDI0MCI+PHJlY3Qgd2lkdGg9IjQ4MCIgaGVpZ2h0PSIyNDAiIHJ4PSIyMCIgZmlsbD0iIzE1M2Y1MiIvPjxjaXJjbGUgY3g9IjQwMCIgY3k9IjQ1IiByPSI2NSIgZmlsbD0iIzI0NjQ3OCIvPjx0ZXh0IHg9IjM1IiB5PSIxMDAiIGZpbGw9IndoaXRlIiBmb250LXNpemU9IjQwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+SFRNTCBMZWFybmluZyBMYWI8L3RleHQ+PHRleHQgeD0iMzUiIHk9IjE1MCIgZmlsbD0iI2I4ZTdkZiIgZm9udC1zaXplPSIyMiIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPlN0cnVjdHVyZS4gQ29ubmVjdC4gQ29sbGVjdC48L3RleHQ+PC9zdmc+" alt="Return to the HTML basics page" width="240" height="120"></a></td><td><table border="1"><caption>Materials</caption><tr><th scope="col">Item</th><th scope="col">Quantity</th></tr><tr><td>Laptop</td><td>1</td></tr></table></td></tr></table>
+<h3>Table without borders</h3><table style="border:0"><caption>Borderless example</caption><tr><td style="border:0">HTML</td><td style="border:0">Describes structure</td></tr><tr><td style="border:0">CSS</td><td style="border:0">Controls appearance</td></tr></table></section>
+<section><h2>02 · Table layouts taught in the notes</h2><p class="note">These examples reproduce the lecture's table layouts and older presentation attributes. For modern page layouts, use CSS Grid or Flexbox.</p>
+<!-- Legacy attributes: width, align, valign, cellpadding and border. -->
+<table border="1" width="80%" align="center" cellpadding="5"><caption>Layout 1: banner and navigation with a spacer</caption><tr><td colspan="3"><h3>Banner area</h3></td></tr><tr><td width="20%" valign="top"><a href="index.html">Navigation</a></td><td width="10">&nbsp;</td><td>Main content</td></tr></table>
+<table border="1" width="80%" align="center" cellpadding="5"><caption>Layout 2: banner, navigation, content and sidebar</caption><tr><td colspan="2"><h3 align="center">Logo banner</h3></td></tr><tr><td colspan="2" align="center"><a href="index.html">Home</a> · <a href="#registration">Register</a></td></tr><tr><td valign="top">Main content</td><td width="100" valign="top">Sidebar</td></tr></table>
+<table border="1" width="80%" align="center" cellpadding="5"><caption>Layout 3: three columns below a banner</caption><tr><td colspan="3"><h3 align="center">Logo banner</h3></td></tr><tr><td width="100" valign="top">Navigation</td><td>Main content</td><td width="100" valign="top">Sidebar</td></tr></table></section>
+<section id="registration"><h2>03 · Form with every control from Part 2</h2><p>Complete this practice form and select “Preview submission”. Reset restores the initial values. This demonstration works locally and does not store or transmit your details.</p>
+<!-- action and method demonstrate the lecture syntax. JavaScript intercepts submit for an offline preview. -->
+<form id="practice-form" name="input" action="page2.html#submission" method="get">
+<fieldset><legend>Student details</legend><label for="first">First name</label><input type="text" id="first" name="firstname" size="25" required><label for="last">Last name</label><input type="text" id="last" name="lastname" size="25" required><label for="password">Practice password (use an invented value)</label><input type="password" id="password" name="pwd" autocomplete="off"><p class="note">The password field masks its characters. The preview omits its value.</p></fieldset>
+<fieldset><legend>Choose one session: radio buttons</legend><label><input type="radio" name="session" value="Morning" checked> Morning</label><label><input type="radio" name="session" value="Afternoon"> Afternoon</label></fieldset>
+<fieldset><legend>Select any topics: checkboxes</legend><label><input type="checkbox" name="topics" value="HTML basics"> HTML basics</label><label><input type="checkbox" name="topics" value="Tables"> Tables</label><label><input type="checkbox" name="topics" value="Forms"> Forms</label></fieldset>
+<fieldset><legend>Drop-down lists and textarea</legend><label for="programme">Programme</label><select id="programme" name="programme"><option value="Diploma" selected="selected">Diploma</option><option value="Degree">Degree</option></select><label for="resources">Resources (multiple selection)</label><select id="resources" name="resources" multiple size="3"><option value="Slides">Slides</option><option value="Exercises">Exercises</option><option value="Examples">Examples</option></select><p class="note">Use Ctrl on Windows or Command on macOS to select multiple resources.</p><label for="comments">Comments</label><textarea id="comments" name="comments" rows="4" cols="36" placeholder="Enter your questions here."></textarea></fieldset>
+<input type="submit" value="Preview submission"><input type="reset" value="Reset form">
+</form><div id="submission" aria-live="polite" hidden><h3>Submission preview</h3><pre id="result"></pre></div><p class="note">A live form needs a server endpoint in its action attribute. This example uses a small script only to display the inputs locally.</p></section>
+<section><h2>04 · What to inspect in the source</h2><p>Find <code>form</code>, <code>input</code>, <code>select</code>, <code>option</code>, <code>textarea</code>, <code>fieldset</code>, <code>legend</code> and <code>label</code>. Notice the attributes <code>name</code>, <code>value</code>, <code>type</code>, <code>checked</code>, <code>selected</code>, <code>rows</code> and <code>cols</code>.</p><a href="index.html">Return to page 1</a></section>
+<script>
+const form = document.getElementById('practice-form');
+const panel = document.getElementById('submission');
+form.addEventListener('submit', function(event) {
+ event.preventDefault();
+ const data = new FormData(form);
+ const chosen = name => data.getAll(name).join(', ') || 'None selected';
+ const lines = [
+  'First name: ' + data.get('firstname'),
+  'Last name: ' + data.get('lastname'),
+  'Password: omitted from preview',
+  'Session: ' + data.get('session'),
+  'Topics: ' + chosen('topics'),
+  'Programme: ' + data.get('programme'),
+  'Resources: ' + chosen('resources'),
+  'Comments: ' + (data.get('comments') || 'No comments')
+ ];
+ document.getElementById('result').textContent = lines.join('\n');
+ panel.hidden = false;
+ panel.scrollIntoView({behavior:'smooth', block:'nearest'});
+});
+form.addEventListener('reset', function() { panel.hidden = true; document.getElementById('result').textContent = ''; });
+</script></main>
+<footer><a href="#top">Back to top</a><p>&copy; HTML Learning Lab. Examples based on the supplied lecture notes.</p></footer>
+</body>
+</html>
